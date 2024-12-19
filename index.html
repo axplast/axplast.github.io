@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Setup -->
+    <meta charset="UTF-8">
+    <title>Обо мне</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/me.jpg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Script -->
+    <script>
+        if (window.location.href.endsWith('angebardet-portfoliosae')) {
+            window.location.href = window.location.href + '/';
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header >
+        <a class="clickable" href="index.html" id="selected">Обо мне</a>
+        <a class="clickable" href="contact.html">Контактная информация</a>
+    </header>
+
+    <!-- Image + Information -->
+    <div class="flexwrap">
+        <a href="https://lms.guap.ru/user/view.php?id=17325&course=286" target="_blank" rel="noopener">
+            <img src="images/me.jpg" class="hoverimg" height="200" width="200" alt="Photo">
+        </a>
+        <div>
+            <h1>Журавлев Владислав</h1>
+            <h2 class="title"><a class="clickable" href="https://guap.ru/">Студент ГУАП</a></h2>
+        </div>
+    </div>
+
+    <hr>
+    
+    <!-- Presentation -->
+    <h1>О себе</h1>
+    <p>Меня зовут Влад, я очень любопытный, и это ещё с детства побудило меня изучать компьютеры и интернет.</p>
+    <p>Интерес к этой теме с годами у меня не угас, в связи с чем я решил продолжать искать себя в этом направлении 
+        и поступить на инфокоммуникационное направление в <strong>ГУАПе</strong>,
+        где на данный момент учусь первый год.</p>
+    
+    <hr>
+
+    <!-- Cursus -->
+    <h1>Образование: </h1>
+    <div class="flexwrap">
+        <div>
+            <img src="images/school.webp" alt="School" width="700px" height="auto"></img>
+            <p>Среднее полное образование</p>
+        </div>
+        <div>
+            <img src="images/guap.jpg" alt="BUT Informatique picture" width="700px" height="auto"></img>
+            <p>Первый курс Инфокоммуникационных технологий и систем связи в ГУАП</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Logo codefirst -->
+    <a href="https://guap.ru/" target="_blank" rel="noopener">
+        <img src="images/guap.png" alt="Лого ГУАП" width="400px" height="auto">
+    </a>
+</body>
+</html>

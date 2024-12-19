@@ -1,0 +1,216 @@
+/* Pour toutes les pages : */
+/* Body */
+body {
+    text-align: center;
+    font-size: 25px;
+    font-family: "Montserrat", sans-serif;
+}
+/* Décalage de la page pour pas être en dessous du header */
+body:not(header) {
+    padding: 100px 0px 0px 0px;
+}
+
+/* Titres */
+h1 {
+    font-size: 30px;
+}
+
+/* Change la couleur de sélection */
+::selection {
+    color: white;
+    background: #005AAA;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 3px;
+    left:0px;
+    right:0px;
+    margin: 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10vw;
+    background-color: #005AAA;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+/* Change la couleur des liens et rajoute un effet de hover (pour header et autres) */
+.clickable, .clickable:visited {
+    text-decoration: none;
+    color: white;
+}
+.clickable:hover {
+    text-shadow: 1px 1px 2px #0088ff;
+}
+
+/* Changement de la couleur sur la page actuelle */
+#selected {
+    color: #ffffff;
+    text-shadow: #ffffff 1px 1px 10px;
+}
+
+
+/* Page A propos */
+/* Animation sur l'image (pour photo de profil) */
+.hoverimg {
+    opacity: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px #005AAA;
+    transition: opacity 0.2s ease-in-out, box-shadow 0.7s ease-in-out;
+}
+.hoverimg:hover {
+    opacity: 85%;
+    box-shadow: 0px 0px 20px #005AAA;
+    transition: opacity 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Titre de présentation */
+.title {
+    color: white;
+    background-color: #005AAA;
+    padding: 10px;
+    font-weight: normal;
+    border-radius: 10px;
+}
+
+
+/* Page Compétences */
+/* Style de la barre de progression */
+progress {
+    border-radius: 50px;
+    width: 300px;
+    height: 20px;
+    border: 2px solid gray;
+}
+progress::-webkit-progress-bar {
+    border-radius: 50px;
+    background-color: black;
+}
+progress::-webkit-progress-value {
+    border-radius: 50px;
+    background-color: #005AAA;
+}
+#divProgress {
+    line-height: 40%;
+}
+
+
+
+/* Page Projets */
+/* Ligne qui sépare les projets */
+#sep_projets {
+    border-color: black;
+    margin: 20px 0px 50px 0px;
+}
+/* Centrer l'image dans le projet */
+.centerimg {
+    padding: 0px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+/* Flex des projets */
+.flexrow{
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Page Projets personnels */
+/* Boite pour présenter les mods de la dernière vidéo */
+#boite {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    border: solid 3px black;
+    width: 60%;
+    margin: 0 auto;
+}
+/* Petit texte pour l'explication dans la boite */
+#small {
+    font-size: 20px;
+}
+/* Aligne le texte à gauche */
+.alignLeft {
+    text-align: left;
+}
+/* Change la couleur du lien */
+a {
+    color: orange;
+}
+
+#cv{
+    border: solid 3px #6d4d43;
+    border-radius: 10px;
+    box-shadow: #6d4d43 0px 0px 5px;
+}
+
+
+/* Autres */
+/* Flex + Wrap pour affichage responsive (A propos + Compétences)*/
+.flexwrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    flex-wrap: wrap;
+    padding: 0px 0px 20px 0px;
+}
+
+/* Responsive, version téléphone */
+@media only screen and (max-width: 800px) {
+    
+    /* Ajuste la hauteur de vide nécessaire pour le header */
+    body:not(header) {
+        padding: 200px 0px 0px 0px;
+    }
+    
+    /* Transforme le header en ligne */
+    header {
+        flex-direction: column;
+        gap: 5px;
+    }
+    header a {
+        width: 100%;
+    }
+
+    #titre{
+        display:none;
+    }
+
+    /* Adapte la taille des images et éléments*/
+    img {
+        width: 50%;
+        height: 50%;
+    }
+    a img {
+        height:auto;
+        width:auto;
+    }
+    #cv {
+        width:80%;
+        height: auto;
+    }
+    progress{
+        width:50vw;
+    }
+
+    iframe {
+        width: 90%;
+    }
+
+    #boite {
+        width: 90%;
+    }
+
+    /* Change le flex lignes en colones. */
+    .flexrow{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
